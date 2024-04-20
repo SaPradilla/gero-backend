@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  mysqldb:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: userDB
+      MYSQL_DATABASE: gerodb
+      MYSQL_USER: Pradi
+      MYSQL_PASSWORD: pradi123
+    volumes:
+      - mysql:/var/lib/mysql
+    ports:
+      - "3306:3306"
+volumes:
+  mysql:
