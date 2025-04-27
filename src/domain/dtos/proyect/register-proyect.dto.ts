@@ -9,7 +9,7 @@ export class RegisterProyectDto{
         public created_by: number
     ){}
 
-
+ 
     static create (object:{[key:string]:any}) : [string?,RegisterProyectDto?]{
 
         const {name,description,start_date,end_date,created_by} = object;
