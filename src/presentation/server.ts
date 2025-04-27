@@ -2,19 +2,19 @@ import express, { Router } from "express";
 
 
 interface Options {
-    port?:Number;
+    port?:any;
     routes: Router;
 }
 
 export class Server {
     
     public readonly app = express();
-    private readonly port : Number;
+    private readonly port : any;
     private readonly routes: Router;
 
     constructor (options : Options){
 
-        const { port = 6000 , routes} = options;
+        const { port , routes} = options;
         this.port = port;
         this.routes = routes;
     }

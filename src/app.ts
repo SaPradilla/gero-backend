@@ -10,7 +10,7 @@ async function main (){
     // levantar el servidor
 
     new Server({
-        port: envs.PORT,
+        port: process.env.PORT,
         routes: AppRoutes.routes
     }).start()
 }
